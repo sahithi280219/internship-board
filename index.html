@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive internship listing board">
+  <title>Internship Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <div>
+        <p class="eyebrow">CAREER BOARD</p>
+        <h1>Find Your Next Internship</h1>
+        <p class="subtitle">
+          Explore internships across technology and creative domains.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="filters" aria-labelledby="filter-heading">
+      <h2 id="filter-heading">Search internships</h2>
+
+      <div class="filter-grid">
+        <div class="form-group">
+          <label for="search">Search by keyword</label>
+          <input
+  type="search"
+  id="search"
+  placeholder="Search: React"
+  autocomplete="off"
+>
+        </div>
+
+        <div class="form-group">
+          <label for="domain">Filter by domain</label>
+          <select id="domain">
+            <option value="all">All domains</option>
+            <option value="Web Development">Web Development</option>
+            <option value="Frontend Development">Frontend Development</option>
+            <option value="Backend Development">Backend Development</option>
+            <option value="Full Stack Development">Full Stack Development</option>
+            <option value="UI/UX Design">UI/UX Design</option>
+          </select>
+        </div>
+
+        <button type="button" id="clearFilters" class="clear-btn">
+          Clear filters
+        </button>
+      </div>
+    </section>
+
+    <section class="results" aria-labelledby="results-heading">
+      <div class="results-header">
+        <div>
+          <h2 id="results-heading">Available Internships</h2>
+          <p id="resultCount" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <div
+        id="internshipList"
+        class="internship-grid"
+        aria-live="polite"
+      ></div>
+
+      <div id="emptyState" class="state hidden" role="status">
+        <h3>No internships found</h3>
+        <p>
+          Try a different keyword or select another domain.
+        </p>
+      </div>
+
+      <div id="errorState" class="state error hidden" role="alert">
+        <h3>Something went wrong</h3>
+        <p>
+          We couldn't load the internship listings. Please try again.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Internship Board · Built with HTML, CSS & JavaScript</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
